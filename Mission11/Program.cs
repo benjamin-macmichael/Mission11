@@ -1,3 +1,7 @@
+//Author: Ben Macmichael
+//Section 003
+//This is a web app that uses pagination to display info about books from a database formerly built that was taken and scaffolded into this app
+
 using Microsoft.EntityFrameworkCore;
 using Mission11.Models;
 
