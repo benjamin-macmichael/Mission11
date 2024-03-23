@@ -4,12 +4,13 @@
 
 @model BooksListViewModel
 
-    <h1>Books</h1>
+<h1>Books</h1>
 
-    @foreach (Book b in Model.Books)
-    {
-        <partial name="BookSummary" model="b"/>
-    }
+@foreach (Book b in Model.Books) // Looping through each book in the model
+{
+    <partial name="BookSummary" model="b" />
+    // Including a partial view for book summary
+}
 
-<div page-model="@Model.PaginationInfo" page-action="Index" page-classes-enabled="true" page-class="btn" page-class-normal="btn-outline-dark" 
-page-class-selected="btn-primary" class="btn-group pull-right m-1"></div>
+<div page-model="@Model.PaginationInfo" page-action="Index" page-classes-enabled="true" page-class="btn" page-class-normal="btn-outline-dark"
+     page-class-selected="btn-primary" class="btn-group pull-right m-1"></div> <!--Rendering pagination controls-->

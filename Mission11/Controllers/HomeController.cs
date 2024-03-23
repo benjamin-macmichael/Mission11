@@ -16,19 +16,19 @@ namespace Mission11.Controllers
 
         public IActionResult Index(int pageNum)
         {
-            int pageSize = 10;
+            int pageSize = 10; // Number of items per page
 
-            var Books = new BooksListViewModel
+            var Books = new BooksListViewModel // Creating a view model for books
             {
-                Books = _repo.Books
-                .OrderBy(x => x.BookId)
-                .Skip((pageNum - 1) * pageSize)
-                .Take(pageSize),
+                Books = _repo.Books // Retrieving books from repository
+                .OrderBy(x => x.BookId) 
+                .Skip((pageNum - 1) * pageSize) // Implementing pagination
+                .Take(pageSize), // Taking a specific number of books for the page
 
-                PaginationInfo = new PaginationInfo
+                PaginationInfo = new PaginationInfo // Creating pagination information
                 {
-                    CurrentPage = pageNum,
-                    ItemsPerPage = pageSize,
+                    CurrentPage = pageNum, 
+                    ItemsPerPage = pageSize, 
                     TotalItems = _repo.Books.Count()
                 }
             };

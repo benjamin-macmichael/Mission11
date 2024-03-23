@@ -8,14 +8,15 @@
 
 
 <div class="card m-1 p-1">
+    <h3 class="card-header">@Model.Title
+        <span class="badge rounded-pill bg-primary text-white float-end"><small>$@Model.Price</small></span>
+    </h3>
     <ul>
-        <li>@Model.Title</li>
-        <li>@Model.Author</li>
-        <li>@Model.Publisher</li>
-        <li>@Model.Isbn</li>
-        <li>@Model.Classification</li>
-        <li>@Model.Category</li>
-        <li>@Model.PageCount</li>
-        <li>@Model.Price</li>
+        <li>Author: @Model.Author</li>
+        <li>Publisher: @Model.Publisher</li>
+        <li>ISBN: @Model.Isbn</li>
+        <li>Classification: @Model.Classification</li>
+        <li>Category: @Model.Category</li>
+        <li>Page Count: @Model.PageCount</li>
     </ul>
 </div>
